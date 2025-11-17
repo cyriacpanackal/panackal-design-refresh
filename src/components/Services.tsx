@@ -1,25 +1,24 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Globe, Users, Building2, MessageSquare } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Building2,
+      emojis: "🛂 ✅",
       title: "Migration Consulting",
       description: "Guidance through visas, permits, and relocation with clear strategies for smooth migration processes.",
     },
     {
-      icon: Users,
+      emojis: "👤 🤝 👤",
       title: "Integration Support",
       description: "Intercultural coaching, adaptation support, and workshops to build inclusive communities.",
     },
     {
-      icon: Globe,
+      emojis: "🌍 ✈️",
       title: "International Recruitment",
       description: "Attract and onboard global talent with cross-cultural recruitment strategies and HR training.",
     },
     {
-      icon: MessageSquare,
+      emojis: "💬 🗨️ 💭",
       title: "Intercultural Training",
       description: "Interactive sessions on intercultural communication tailored to diverse teams and organizations.",
     },
@@ -45,8 +44,8 @@ const Services = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
-                <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-                  <service.icon className="w-8 h-8 text-primary" />
+                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {service.emojis}
                 </div>
                 <CardTitle className="text-xl font-bold text-foreground">
                   {service.title}
